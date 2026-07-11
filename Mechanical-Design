@@ -1,1 +1,117 @@
-Mechanical design and structural development of the Adaptive Quadruped Robot (AQR), including TinkerCAD model, assembly design, torque calculations, and component integration.
+Mechanical design and structural development of the Adaptive Quadruped Robot (AQR), including TinkerCAD model, assembly design, torque calculations, and component integration
+
+1. Robot Specifications
+Robot Name: AQR (Adaptive Quadruped Robot)
+Number of Legs: 4
+Degrees of Freedom (DOF): 8 (2 DOF per leg)
+Actuators: MG996R Servo Motors
+
+2. Mechanical Dimensions :
+
+ Body Length 120 mm
+ Body Width 80 mm
+ Body Height 25 mm
+ Upper Leg Length 50 mm
+ Lower Leg Length 60 mm
+
+3. Estimated Robot Weight
+
+ Chassis 0.60 kg
+ Battery 0.35 kg
+ Arduino + Electronics 0.10 kg
+ Eight Servo Motors 0.60 kg
+ Four Legs 0.35 kg
+ Total Weight 2.00 kg
+m = 2.0 kg
+
+4. Gravitational Force
+
+The gravitational acceleration is:
+
+g = 9.81\;m/s^2
+
+The total weight force acting on the robot is:
+
+F = mg
+
+F = 2.0 \times 9.81
+
+F = 19.62\;N
+
+5. Load Distribution Per Leg
+
+Assuming the robot is standing on four legs and the weight is evenly distributed:
+
+F_{leg}=\frac{19.62}{4}
+
+F_{leg}=4.905\;N
+
+Each leg supports approximately 4.9 N under static conditions.
+
+
+6. Hip Joint Torque Calculation
+
+The upper leg length is:
+
+L = 50\;mm = 0.05\;m
+
+The required torque is calculated by:
+
+T = F \times L
+
+T = 4.905 \times 0.05
+
+T = 0.245\;N\cdot m
+
+Therefore, the minimum required torque at the hip joint is:
+
+\boxed{T = 0.245\;N\cdot m}
+
+7. Safety Factor
+
+A safety factor of 2 is selected for mechanical reliability.
+
+T_{design}=2\times0.245
+
+T_{design}=0.49\;N\cdot m
+
+Therefore, each actuator should provide at least
+
+T>0.5\;N\cdot m
+
+8. Servo Motor Selection
+
+Selected Motor: MG996R Servo
+
+Typical output torque:
+
+1.0\sim1.1\;N\cdot m
+
+Since
+
+1.0 > 0.49
+
+the selected servo provides an adequate safety margin and is suitable for the proposed design.
+
+9. Center of Gravity (CG)
+
+To improve stability, the robot components are arranged as follows:
+
+The battery is positioned at the center of the chassis.
+The Arduino controller is mounted directly above the battery.
+The four legs are symmetrically distributed around the body.
+
+10. Walking Gait
+
+The selected locomotion method is the Crawl Gait, which offers high stability during motion.
+11. Material Selection
+
+Selected Material: PLA Plastic
+
+PLA was chosen because it:
+
+Is lightweight.
+Has a low manufacturing cost.
+Is easy to fabricate using 3D printing.
+Is well suited for prototype development.
+Provides sufficient strength for a small educational quadruped robot.
