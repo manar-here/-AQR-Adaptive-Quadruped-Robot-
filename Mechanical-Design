@@ -15,7 +15,7 @@ Actuators: MG996R Servo Motors
 3. Estimated Robot Weight
  Chassis 0.60 kg
  Battery 0.35 kg
- Arduino + Electronics 0.10 kg
+ ESP32 + Electronics 0.10 kg
  Eight Servo Motors 0.60 kg
  Four Legs 0.35 kg
  Total Weight 2.00 kg
